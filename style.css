@@ -9,12 +9,12 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(6, auto);
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
-  background-image: radial-gradient(circle, #f0b2ab, #a3d8cf);
+  background-image: radial-gradient(circle, #f0b2ab, #a3d8cf, #cd89d6);
 }
 
 .card {
@@ -27,8 +27,9 @@ body {
   box-shadow: 1px 1px 5px #02a298aa;
   transition-property: transform, box-shadow;
   transition-duration: 0.5s;
-  background: #fff5;
+  background-color: #fff5;
 }
+
 .card:hover {
   transform: scale(1.02, 1.02);
   box-shadow: 1px 1px 5px #02a298aa, 1px 1px 15px #02a298aa;

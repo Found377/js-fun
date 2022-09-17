@@ -29,11 +29,11 @@ while (n--) {
 
 const box = document.querySelector(".box");
 box.innerHTML = '<div class="card"></div>';
-
 for (let val of data) {
-  box.innerHTML += `<div class="card" style="background-color: ${
-    colors[getNumber(colors.length - 1)]
-  }">${optimizeNumber(val)}</div>`;
+  box.innerHTML += `<div 
+        class="card" 
+        style="background-color: ${colors[getNumber(colors.length - 1)]}"
+    >${optimizeNumber(val)}</div>`;
 }
 
 function showTime(day = new Date(2023, 1, 7, 23)) {
@@ -46,9 +46,9 @@ function showTime(day = new Date(2023, 1, 7, 23)) {
   m -= h * 60;
   d = Math.floor(h / 24);
   h -= d * 24;
-  return `${d} дней ${h} часов ${m} минут ${s} секунд`;
+  return `${d} д. ${h} ч. ${m} мин. ${s} сек.`;
 }
-
+box.firstElementChild.innerText = `До окончания осталось ${showTime()}`;
 setInterval(function () {
   box.firstElementChild.innerText = `До окончания осталось ${showTime()}`;
 }, 1000);
